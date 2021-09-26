@@ -1,5 +1,6 @@
 import discord
 from discord.ext.commands import Bot
+import os
 
 intents=discord.Intents.default()
 bot = Bot(command_prefix='~', intents=intents)
@@ -22,4 +23,5 @@ async def 도배(ctx, text,number):
      for i in range(int(number)):
          await ctx.send(text)
 
-bot.run('ODkxNjgxNDMzODY3OTIzNDg2.YVB5DA.y4itpNweBwqKUAl5-q2TgPXU3IY')
+access_token = os.environ["BOT_TOKEN"]
+bot.run(access_token)
