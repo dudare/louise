@@ -8,6 +8,7 @@ intents=discord.Intents.default()
 bot = Bot(command_prefix='~', intents=intents)
 
 Papering = False
+PaperNum = 0
 
 TheNum = 0
 
@@ -28,10 +29,14 @@ async def 안녕(ctx):
 async def 도배해줘(ctx, text,number):
     await ctx.send(text+"를 "+number+" 번 도배하겠습니다")
     Papering = True
-    if Papering == True:
-        for i in range(int(number)):
+    PaperNum = int(number)
+    while Papering == True:
+        while PaperNum != 0:
+            PaperNum = PaperNum - 1
             await ctx.send(text)
             time.sleep(1)
+            if PaperNum == 0:
+                Papering = False
 
 @bot.command()
 async def 도배그만(ctx):
