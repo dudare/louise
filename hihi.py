@@ -27,16 +27,9 @@ async def 안녕(ctx):
 
 @bot.command()
 async def 도배해줘(ctx, text,number):
-    await ctx.send(text+"를 "+number+" 번 도배하겠습니다")
-    Papering = True
-    PaperNum = int(number)
-    while Papering == True:
-        while PaperNum != 0:
-            PaperNum = PaperNum - 1
-            await ctx.send(text)
-            time.sleep(1)
-            if PaperNum == 0:
-                Papering = False
+    if Papering == True:
+        await ctx.send(text+"를 "+number+" 번 도배하겠습니다")
+        await ctx.send("도배해줘")
 
 @bot.command()
 async def 도배그만(ctx):
