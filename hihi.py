@@ -53,5 +53,4 @@ async def 메뉴추천해줘 (ctx, M1,M2,M3,M4,M5):
 async def 메뉴추천해줘_error(ctx, error):
     await ctx.send("메뉴를 5개 입력해 주세요")
 
-access_token = os.environ["BOT_TOKEN"]
-bot.run(access_token)
+bot.run("MTEwOTQ1NjAzMDcwODAyMzM0Ng.Gc8I64.LVj5CFF0E4jY4HCYwDcLDI1vc3ALavvkeutnJM")
